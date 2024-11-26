@@ -24,7 +24,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag gitaction:$(date +%s)
+      run: docker build . --file Dockerfile --tag gitaction
 
     - name: Push Docker image to Docker Hub
-      run: docker push gitaction:$(date +%s)
+      run: docker push gitaction
